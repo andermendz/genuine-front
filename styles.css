@@ -135,10 +135,25 @@ aside {
   margin-bottom: 4rem;
 }
 
+/* Mission illustration */
+.mission-illustration {
+    
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mission-jetpack {
+  width: 300px;
+  height: auto;
+}
+
 .mission-container {
+    background: linear-gradient(180deg, #D5E6F7 0%, #FFFFFF 37.5%);
   overflow: hidden;
   border-radius: 1.5rem;
-  background-color: var(--bg-color);
+
   padding: 2rem;
 }
 
@@ -242,9 +257,11 @@ aside {
   text-decoration: none;
 }
 
-.usa-image {
-  aspect-ratio: 16/9;
-  background-color: #e5e7eb;
+
+
+.usa-image>img{
+ 
+    width: 100%;
 }
 
 /* Global section */
