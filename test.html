@@ -4,88 +4,66 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Genuine Digital School</title>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .text-shadow {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-50 font-sans">
-
-  <!-- Main 12-Column Container (using Tailwind's default) -->
-  <div class="mx-auto max-w-[1440px] px-4 pt-20 pb-16 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-8">
-
+<body>
+  <!-- Main Container -->
+  <div class="container grid">
     <!-- Main Content -->
-    <main class="col-span-1 md:col-span-9">  <!-- 9 columns on medium+ -->
-   <!-- Hero Section -->
-<section id="hero" class="mb-16 overflow-hidden rounded-3xl bg-[#f8faff]">
-    <div class="relative aspect-[16/9] w-full bg-gray-200">
-      <!-- Hero Background Image (Family Photo) -->
-      <img src="/familia-panel1.jpg" alt="Family enjoying digital learning" class="absolute inset-0 w-full h-full object-cover rounded-3xl" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
-      <div class="absolute left-0 top-0 h-full p-8 md:p-12">
-        <div class="flex h-full flex-col justify-between">
-          <div class="max-w-xl space-y-8">
-            <div class="rounded-3xl bg-gradient-to-r from-purple-100/90 to-blue-100/90 p-8 shadow-lg">
-              <h1 class="text-2xl font-bold text-[#1a237e] md:text-4xl lg:text-4xl">
-                Estás a punto de iniciar<br>
-                un viaje hacia el universo<br>
-                de la <span class="rounded-lg bg-white px-3 py-1 shadow-sm">educación digital</span>
-              </h1>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-container">
+          <img src="/familia-panel1.jpg" alt="Family enjoying digital learning" class="hero-image" />
+          <div class="hero-gradient"></div>
+          <div class="hero-content">
+            <div class="hero-text-container">
+              <div class="hero-heading">
+                <div class="hero-title">
+                  <h1>
+                    Estás a punto de iniciar<br>
+                    un viaje hacia el universo<br>
+                    de la <span class="highlight">educación digital</span>
+                  </h1>
+                </div>
+                <!-- Logo Display -->
+                <div class="logo-container">
+                  <img src="genuine-logo.png" alt="Genuine Digital School Logo" />
+                </div>
+              </div>
+              <div class="website-text">
+                studyatgenuine.com
+              </div>
             </div>
-            <!-- Logo Display -->
-            <div class="flex items-center gap-4">
-              <img src="genuine-logo.png" alt="Genuine Digital School Logo" class="h-16 w-auto" />
-            </div>
-          </div>
-          <div class="text-lg font-medium text-[#1a237e]/80">
-            studyatgenuine.com
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
+      </section>
 
       <!-- Mission Section -->
-      <section id="mission" class="mb-16">
-        <div class="overflow-hidden rounded-3xl bg-[#f8faff] p-8 md:p-12">
-          <h2 class="mb-8 text-center text-2xl font-bold text-[#1a237e] md:text-3xl">
+      <section class="mission" id="mission">
+        <div class="mission-container">
+          <h2 class="mission-title">
             Nuestra misión en el mundo y lo que soñamos<br>
             para tus hijos
           </h2>
-          <div class="grid gap-6 md:grid-cols-2">
-            <div class="rounded-xl border-2 bg-white p-6">
-              <div class="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100">🚀</div>
-              <h3 class="mb-3 text-lg font-bold text-[#1a237e]">Nuestra misión</h3>
-              <p class="text-sm text-gray-600">
+          <div class="mission-grid">
+            <div class="mission-card">
+              <div class="mission-icon blue">🚀</div>
+              <h3>Nuestra misión</h3>
+              <p>
                 Educar, empoderar y conectar a nuestros estudiantes mediante experiencias de aprendizaje remoto que
                 trascienden las fronteras geográficas e idiomáticas.
               </p>
             </div>
-            <div class="rounded-xl border-2 bg-white p-6">
-              <div class="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-purple-100">👁️</div>
-              <h3 class="mb-3 text-lg font-bold text-[#1a237e]">Nuestra visión</h3>
-              <p class="text-sm text-gray-600">
+            <div class="mission-card">
+              <div class="mission-icon purple">👁️</div>
+              <h3>Nuestra visión</h3>
+              <p>
                 Visualizamos un mundo donde miles de jóvenes y niños usen sus habilidades para transformar sus
                 comunidades y regiones por medio del emprendimiento, la tecnología y la innovación.
               </p>
@@ -95,96 +73,90 @@
       </section>
 
       <!-- USA Section -->
-      <section id="usa" class="mb-16">
-        <div class="overflow-hidden rounded-3xl bg-white">
-          <div class="grid md:grid-cols-2">
-            <div class="p-8 md:p-12">
-              <h2 class="mb-4 text-2xl font-bold text-[#1a237e] md:text-3xl">
-                De Estados Unidos para<br>
-                el mundo
-              </h2>
-              <p class="mb-8 text-sm text-gray-600">
-                Nuestro colegio digital privado está constituido y registrado en Estados Unidos ante el Florida
-                Department of Education con el código 8822.
-              </p>
-              <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium text-[#1a237e] underline">
-                  Conoce el nuestro aquí
-                </a>
-                <a href="#" class="rounded-full bg-[#1a237e] px-6 py-2 text-sm font-medium text-white">
-                  Registro legal
-                </a>
-              </div>
+      <section class="usa" id="usa">
+        <div class="usa-container">
+          <div class="usa-content">
+            <h2 class="usa-title">
+              De Estados Unidos para<br>
+              el mundo
+            </h2>
+            <p class="usa-text">
+              Nuestro colegio digital privado está constituido y registrado en Estados Unidos ante el Florida
+              Department of Education con el código 8822.
+            </p>
+            <div class="usa-links">
+              <a href="#" class="usa-link">
+                Conoce el nuestro aquí
+              </a>
+              <a href="#" class="usa-button">
+                Registro legal
+              </a>
             </div>
-            <!-- Placeholder for image -->
-            <div class="aspect-video bg-gray-200 md:aspect-auto"></div>
           </div>
+          <div class="usa-image"></div>
         </div>
       </section>
 
       <!-- Global Section -->
-      <section id="global" class="mb-16">
-        <div class="overflow-hidden rounded-3xl bg-white p-8 md:p-12">
-          <h2 class="mb-6 text-2xl font-bold text-[#1a237e] md:text-3xl">
+      <section class="global">
+        <div class="global-container">
+          <h2 class="global-title">
             Somos<br>
             del mundo
           </h2>
-          <div class="mb-8 flex flex-wrap gap-4">
-            <div class="rounded-full bg-orange-100 px-6 py-2 font-medium text-orange-700">+ 400 Estudiantes</div>
-            <div class="rounded-full bg-purple-100 px-6 py-2 font-medium text-purple-700">28 Staff</div>
-            <div class="rounded-full bg-blue-100 px-6 py-2 font-medium text-blue-700">44 Profesores</div>
+          <div class="stats">
+            <div class="stat orange">+ 400 Estudiantes</div>
+            <div class="stat purple">28 Staff</div>
+            <div class="stat blue">44 Profesores</div>
           </div>
-          <div class="grid gap-8 md:grid-cols-[1fr,2fr]">
-            <div class="space-y-4">
-              <div class="rounded-lg bg-orange-500 p-4 text-sm text-white">
+          <div class="global-grid">
+            <div class="global-list">
+              <div class="global-item orange">
                 Colombia, Ecuador, Perú, México, Panamá, Costa Rica, Chile, Argentina, Estados Unidos, Emiratos
                 Árabes, Brasil, República Dominicana, Irlanda, España, Reino Unido, Portugal, China, Italia.
               </div>
-              <div class="rounded-lg bg-purple-500 p-4 text-sm text-white">
+              <div class="global-item purple">
                 Estados Unidos, Colombia, Perú, Brasil, Chile, México, Venezuela.
               </div>
-              <div class="rounded-lg bg-purple-700 p-4 text-sm text-white">
+              <div class="global-item dark-purple">
                 Colombia, Sudáfrica, Filipinas, Chile, México, Singapur.
               </div>
             </div>
-            <!-- Placeholder for world map -->
-            <div class="aspect-[2/1] rounded-lg bg-gray-200"></div>
+            <div class="global-map"></div>
           </div>
         </div>
       </section>
 
       <!-- Join Section -->
-      <section id="join">
-        <div class="overflow-hidden rounded-3xl bg-white">
-          <div class="relative aspect-video w-full bg-gray-200">
-            <!-- Placeholder for Join Section Image -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 p-8 text-white md:p-12">
-              <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2">
-                <!-- Logo -->
-                <div class="flex items-center gap-1">
-                  <span class="text-2xl font-bold text-[#1a237e]">G</span>
-                  <div class="flex flex-col gap-[2px]">
-                    <div class="h-[3px] w-4 rounded-full bg-[#90caf9]"></div>
-                    <div class="h-[3px] w-4 rounded-full bg-[#ce93d8]"></div>
-                    <div class="h-[3px] w-4 rounded-full bg-[#ef5350]"></div>
+      <section class="join" id="join">
+        <div class="join-container">
+          <div class="join-hero">
+            <div class="join-gradient"></div>
+            <div class="join-content">
+              <div class="join-logo">
+                <div class="join-logo-content">
+                  <span class="join-logo-text">G</span>
+                  <div class="join-logo-bars">
+                    <div class="join-logo-bar blue"></div>
+                    <div class="join-logo-bar purple"></div>
+                    <div class="join-logo-bar red"></div>
                   </div>
                 </div>
               </div>
-              <h2 class="mb-4 text-2xl font-bold md:text-3xl">
+              <h2 class="join-title">
                 ¡Únete a Genuine Digital School hoy!
               </h2>
-              <p class="mb-6">
+              <p class="join-text">
                 Explora el increíble universo de la educación virtual junto a tu hijo
               </p>
-              <p class="mb-4 text-sm">
+              <p class="join-social">
                 Síguenos en Redes Sociales y conoce nuestra gran comunidad digital
               </p>
-              <div class="flex gap-4">
-                <i data-lucide="facebook" class="h-6 w-6"></i>
-                <i data-lucide="instagram" class="h-6 w-6"></i>
-                <i data-lucide="youtube" class="h-6 w-6"></i>
-                <i data-lucide="linkedin" class="h-6 w-6"></i>
+              <div class="social-icons">
+                <i data-lucide="facebook"></i>
+                <i data-lucide="instagram"></i>
+                <i data-lucide="youtube"></i>
+                <i data-lucide="linkedin"></i>
               </div>
             </div>
           </div>
@@ -193,24 +165,23 @@
     </main>
 
     <!-- Sidebar -->
-    <aside class="col-span-1 md:col-span-3 sticky top-8 self-start hidden md:block"> <!-- 3 columns on medium+ -->
-      <div class="rounded-3xl bg-white p-6 shadow-lg">
-        <div class="flex items-center justify-between">
-          <!-- Logo -->
-          <div class="ml-auto flex items-center gap-1">
-            <span class="text-2xl font-bold text-[#1a237e]">G</span>
-            <div class="flex flex-col gap-[2px]">
-              <div class="h-[3px] w-4 rounded-full bg-[#90caf9]"></div>
-              <div class="h-[3px] w-4 rounded-full bg-[#ce93d8]"></div>
-              <div class="h-[3px] w-4 rounded-full bg-[#ef5350]"></div>
+    <aside class="sidebar">
+      <div class="sidebar-container">
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-content">
+            <span class="sidebar-logo-text">G</span>
+            <div class="sidebar-logo-bars">
+              <div class="sidebar-logo-bar blue"></div>
+              <div class="sidebar-logo-bar purple"></div>
+              <div class="sidebar-logo-bar red"></div>
             </div>
           </div>
         </div>
-        <nav class="mt-6 space-y-4">
-          <a href="#hero" class="block text-lg font-medium text-[#1a237e] hover:text-purple-600">Inicio</a>
-          <a href="#mission" class="block text-lg font-medium text-[#1a237e] hover:text-purple-600">¿Quiénes somos?</a>
-          <a href="#usa" class="block text-lg font-medium text-[#1a237e] hover:text-purple-600">Somos Estadounidenses</a>
-          <a href="#join" class="block text-lg font-medium text-[#1a237e] hover:text-purple-600">Únete a Genuine</a>
+        <nav class="sidebar-nav">
+          <a href="#hero" class="sidebar-link">Inicio</a>
+          <a href="#mission" class="sidebar-link">¿Quiénes somos?</a>
+          <a href="#usa" class="sidebar-link">Somos Estadounidenses</a>
+          <a href="#join" class="sidebar-link">Únete a Genuine</a>
         </nav>
       </div>
     </aside>
@@ -225,9 +196,12 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>
