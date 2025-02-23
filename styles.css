@@ -343,7 +343,10 @@ aside {
 
 .global-map {
   aspect-ratio: 2/1;
-  background-color: #e5e7eb;
+  background-image: url('map.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 0.5rem;
 }
 
@@ -358,7 +361,10 @@ aside {
   position: relative;
   aspect-ratio: 16/9;
   width: 100%;
-  background-color: #e5e7eb;
+  background-image: url('kids.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .join-gradient {
